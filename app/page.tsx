@@ -235,6 +235,12 @@ export default function Home() {
     },
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      fetchSubdomains(domain);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-4 sm:p-6 md:p-8">
       <motion.div
@@ -255,6 +261,7 @@ export default function Home() {
               type="text"
               value={domain}
               onChange={(e) => setDomain(e.target.value)}
+              onKeyPress={handleKeyPress}
               placeholder="Enter domain (e.g. example.com)"
               className="flex-1 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
             />
