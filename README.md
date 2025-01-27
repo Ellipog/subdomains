@@ -1,16 +1,16 @@
-# Aaenz Web Portal
+# Subdomain Explorer
 
-A modern web portal built with Next.js that displays and manages subdomains of aaenz.no. The portal features a beautiful, responsive UI with real-time subdomain status checking and title fetching.
+A modern web application built with Next.js that discovers and explores subdomains of any website. Features a beautiful, responsive UI with real-time subdomain status checking and title fetching capabilities.
 
 ## Features
 
-- 📌 Pinned sites management
-- 🔍 Automatic subdomain discovery
-- 🎯 Real-time status checking
+- 🔍 Automatic subdomain discovery using certificate transparency logs
+- 🎯 Real-time status checking of discovered subdomains
 - 📱 Responsive design for all devices
-- 🎨 Modern UI with animations
+- 🎨 Modern UI with smooth animations
 - 🌙 Dark mode support
-- 🔒 Secure iframe handling
+- 🔒 Secure domain handling
+- 📊 Clean data visualization
 
 ## Tech Stack
 
@@ -31,54 +31,34 @@ A modern web portal built with Next.js that displays and manages subdomains of a
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/your-username/aaenz.git
-cd aaenz
-```
+   ```bash
+   git clone https://github.com/yourusername/subdomain-explorer.git
+   cd subdomain-explorer
+   ```
 
 2. Install dependencies:
 
-```bash
-npm install
-# or
-bun install
-```
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
 
-3. Run the development server:
+3. Create a `.env` file in the root directory and add any required environment variables:
 
-```bash
-npm run dev
-# or
-bun dev
-```
+   ```bash
+   cp .env.example .env
+   ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+4. Start the development server:
 
-## Development
+   ```bash
+   npm run dev
+   # or
+   bun dev
+   ```
 
-- `bun dev` - Start development server with Turbopack
-- `bun run build` - Build for production
-- `bun run start` - Start production server
-- `bun run lint` - Run ESLint
-
-## Project Structure
-
-```
-aaenz/
-├── app/                # Next.js app directory
-│   ├── api/           # API routes
-│   ├── page.tsx       # Main page component
-│   └── layout.tsx     # Root layout
-├── hooks/             # Custom React hooks
-├── static/            # Static data (pins)
-└── public/            # Public assets
-```
-
-## API Endpoints
-
-- `/api/subdomains` - Fetches all subdomains
-- `/api/get-title` - Retrieves site titles
-- `/api/check-status` - Checks site availability
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 ---
 
